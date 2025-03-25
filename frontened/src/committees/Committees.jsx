@@ -6,7 +6,8 @@ import Committee from '../components/Committee'
 const Committees = () => {
   return (
    <>
-     <Navbar fixedColor="blue" />
+    <Navbar alwaysSolid={true} />
+
      <Committee />
      <Footer />
    </>

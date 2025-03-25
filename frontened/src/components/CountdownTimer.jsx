@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const CountdownTimer = () => {
-  const eventDate = new Date("2025-03-15T00:00:00").getTime();
+  const eventDate = new Date("2025-05-05T00:00:00").getTime();
 
   const calculateTimeLeft = () => {
     const now = new Date().getTime();
@@ -30,29 +31,53 @@ const CountdownTimer = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center bg-[#F8F6F0] text-[#062045] py-10">
-      
-      <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-center mb-6 text-[#062045] tracking-wide">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: false }}
+      className="flex flex-col items-center justify-center bg-white text-[#062045] py-16 px-4"
+    >
+      {/* Heading */}
+      <motion.h2
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1, delay: 0.2 }}
+        viewport={{ once: false }}
+        className="text-3xl sm:text-4xl md:text-6xl font-bold text-center mb-10 text-[#062045] tracking-wide drop-shadow-md"
+      >
         Conference Begins In
-      </h2>
+      </motion.h2>
 
-      {/* Ensures Horizontal Layout Everywhere */}
-      <div className="grid grid-cols-4 gap-4 w-full max-w-[800px] mx-auto">
+      {/* Timer Cards */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.4 }}
+        viewport={{ once: false }}
+        className="grid grid-cols-2 sm:grid-cols-4 gap-8 w-full max-w-[800px] mx-auto"
+      >
         {Object.entries(timeLeft).map(([unit, value], index) => (
-          <div
+          <motion.div
             key={index}
-            className="border-4 border-[#9a7e2f] px-4 py-4 sm:px-6 sm:py-6 rounded-2xl text-center w-full bg-white shadow-lg backdrop-blur-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-2xl"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 + index * 0.2 }}
+            viewport={{ once: false }}
+            whileHover={{ scale: 1.05, y: -10 }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-white px-6 py-8 rounded-3xl text-center w-full shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-[#9a7e2f]"
           >
-            <p className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-[#062045] tracking-wider">
+            <p className="text-5xl md:text-6xl font-extrabold text-[#062045] tracking-wider">
               {value}
             </p>
-            <span className="text-sm sm:text-lg uppercase text-[#9a7e2f] font-semibold">
+            <span className="text-base sm:text-lg uppercase text-[#9a7e2f] font-semibold mt-2 block">
               {unit}
             </span>
-          </div>
+          </motion.div>
         ))}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
