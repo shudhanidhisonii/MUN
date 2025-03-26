@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import { createClient } from '@supabase/supabase-js'
+
+// Create a single supabase client for interacting with your database
+const supabase = createClient('https://wfvpxvstplutokslykcp.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndmdnB4dnN0cGx1dG9rc2x5a2NwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI2MTczOTYsImV4cCI6MjA1ODE5MzM5Nn0.I0l8pkf8tTkL9UjBOyWR0iJswPK0DZL9gzY7JoUBuUI')
 
 const Register = () => {
   const initialFormData = {
@@ -27,6 +31,7 @@ const Register = () => {
 
   const handleChange = (e) => {
     const { name, value, files } = e.target;
+    
     if (files) {
       setFormData({ ...formData, [name]: files[0] });
     } else {
@@ -57,11 +62,58 @@ const Register = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (validate()) {
-      alert("Form submitted successfully!");
       // Process the form here
+      try {
+        let paymentScreenshotUrl = null;
+
+        // Upload file to Supabase Storage
+        if (formData.paymentScreenshot) {
+            const file = formData.paymentScreenshot;
+            const filePath = `screenshots/${Date.now()}_${formData.name}_${formData.phone}_${file.name}`;
+            const { data, error } = await supabase.storage
+                .from("screenshots") // Bucket name
+                .upload(filePath, file);
+
+            if (error) throw error;
+
+            const res = await supabase
+            .storage
+            .from('screenshots')
+            .getPublicUrl(filePath)
+
+            console.log(res);
+
+            paymentScreenshotUrl = res.data.publicUrl; // File path in storage
+        }
+
+        // Insert data into Supabase
+        const { data, error } = await supabase.from("registrations").insert([
+            {
+                ...formData,
+                paymentScreenshot: paymentScreenshotUrl,
+            },
+        ]);
+
+        if (error){
+          
+          if(error.code == "23505"){
+            //Duplicate key
+            alert("User already exists.")
+            return;
+          }
+          console.log(error);
+        
+        } 
+          
+        alert("User Registered Successfully!");
+    } catch (error) {
+        console.error("Error inserting data:", error.message);
+        alert("Registration Failed");
+    }
+
     } else {
       alert("Please fill in all required fields.");
     }
