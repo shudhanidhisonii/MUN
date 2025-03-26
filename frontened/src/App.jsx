@@ -9,7 +9,7 @@ import FAQ from './faq/FAQ';
 
 
 import Registration from './registration/Registration';
-import Prize from './Prize/prize';
+import Prize from './prize/Prize';
 
 const App = () => {
   const location = useLocation(); // Required for AnimatePresence to detect route changes
