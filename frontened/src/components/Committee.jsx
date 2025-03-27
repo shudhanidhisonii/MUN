@@ -135,7 +135,7 @@ const Committee = () => {
               className="w-full md:w-3/4 bg-[#f0f0f0] p-6 rounded-xl shadow-lg border-4 border-[#9a7e2f]"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-[#9a7e2f] mb-4">
-                UNGA
+                UNGA-DISEC
               </h2>
               <motion.p
                 variants={fadeInUp}
@@ -150,6 +150,14 @@ const Committee = () => {
                 policies that shape global governance. In this committee,
                 delegates will tackle pressing topics and work collaboratively
                 to draft resolutions.
+                <br />
+                <br />
+            <span className="font-bold text-[#9a7e2f] text-xl md:text-2xl">
+         Agenda:  
+        </span> 
+         <span className="text-[#062045] text-xl md:text-lg">
+        <b> Deliberation on the illegal trade of conventional arms, with special emphasis on the effectiveness of international arms control agreements</b>
+        </span>
               </motion.p>
             </motion.div>
           </motion.div>
@@ -186,19 +194,28 @@ const Committee = () => {
                 UNHRC
               </h2>
               <motion.p
-                variants={fadeInUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
-                className="text-base md:text-lg text-[#062045] leading-relaxed"
-              >
+             variants={fadeInUp}
+             initial="hidden"
+             whileInView="visible"
+             viewport={{ once: false, amount: 0.2 }}
+             className="text-base md:text-lg text-[#062045] leading-relaxed"
+>
                 The United Nations Human Rights Council (UNHRC) is responsible
                 for strengthening the promotion and protection of human rights
                 around the globe. Delegates will deliberate on sensitive human
                 rights issues, investigate allegations of violations, and
-                recommend solutions that uphold dignity and justice for all.
-              </motion.p>
-            </motion.div>
+                recommend solutions that uphold dignity and justice for all.  
+         <br />
+         <br />
+            <span className="font-bold text-[#9a7e2f] text-xl md:text-2xl">
+         Agenda: 
+        </span> 
+         <span className="text-[#062045] text-lg md:text-lg">
+              <b>Addressing human rights violations and their impact on civilians in
+              the MENA region.</b>
+        </span>
+            </motion.p>
+           </motion.div>
           </motion.div>
 
           {/* UNEP */}
@@ -245,6 +262,14 @@ const Committee = () => {
                 biodiversity loss, and sustainable development, seeking
                 innovative strategies to protect our planet for future
                 generations.
+                <br />
+                <br />
+            <span className="font-bold text-[#9a7e2f] text-xl md:text-2xl">
+         Agenda:  
+        </span> 
+         <span className="text-[#062045] text-lg md:text-lg">
+         <b>Deliberation on reducing greenhouse gas emissions and transitioning to low-carbon economies.</b>
+        </span>
               </motion.p>
             </motion.div>
           </motion.div>
@@ -293,6 +318,14 @@ const Committee = () => {
                 pressing national issues, striving to build consensus and
                 formulate effective policy decisions. This committee encourages
                 dynamic participation and negotiation skills.
+                <br />
+                <br />
+            <span className="font-bold text-[#9a7e2f] text-xl md:text-2xl">
+         Agenda:  
+        </span> 
+         <span className="text-[#062045] text-lg md:text-lg">
+         <b>Addressing challenges to secularism posed by political parties leveraging religion for electoral gains.</b>
+        </span>
               </motion.p>
             </motion.div>
           </motion.div>

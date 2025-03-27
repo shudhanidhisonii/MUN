@@ -47,6 +47,7 @@ const Register = () => {
         !value &&
         key !== "branch" &&
         key !== "referral" &&
+        key !== "year" &&
         key !== "paymentScreenshot"
       ) {
         newErrors[key] = "This field is required";
@@ -120,13 +121,15 @@ const Register = () => {
   };
 
   const inputStyles = (field) =>
-    `w-full px-4 py-3 border rounded-md focus:ring-2 focus:outline-none ${
+    `w-full px-4 py-3 border rounded-md focus:ring-2 focus:outline-none text-black placeholder-black bg-white ${
       errors[field]
         ? "border-red-500 focus:ring-red-500"
-        : "border-gray-300 focus:ring-[#9a7e2f]"
+        : "border-black focus:ring-black"
     }`;
+  
 
-  const labelStyles = "block text-gray-700 font-medium mb-2";
+  const labelStyles =  "block text-black font-medium mb-2";
+;
 
   return (
     <div className="bg-white py-36 px-6 md:px-20 flex justify-center">
@@ -163,7 +166,7 @@ const Register = () => {
 
           {/* Year */}
           <div>
-            <label className={labelStyles}>Year 🎓</label>
+            <label className={labelStyles}>Year 🎓<span className="text-sm text-gray-400">(Optional)</span></label>
             <select
               name="year"
               value={formData.year}
@@ -223,7 +226,7 @@ const Register = () => {
 
           {/* Branch */}
           <div>
-            <label className={labelStyles}>Branch 🏢</label>
+            <label className={labelStyles}>Branch 🏢<span className="text-sm text-gray-400">(Optional)</span></label>
             <select
               name="branch"
               value={formData.branch}
