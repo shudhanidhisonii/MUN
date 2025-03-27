@@ -1,8 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 const FAQPage = () => {
   const [openIndex, setOpenIndex] = useState(null);
+  const [hoverIndex, setHoverIndex] = useState(null);
+
+  useEffect(() => {
+    let timer;
+    if (hoverIndex !== null) {
+      timer = setTimeout(() => setOpenIndex(hoverIndex), 300); // 300ms delay
+    }
+    return () => clearTimeout(timer);
+  }, [hoverIndex]);
 
   const faqData = [
     {
@@ -80,7 +89,8 @@ const FAQPage = () => {
                   ? 'bg-gray-100'
                   : 'bg-gray-50 hover:bg-gray-100'
               }`}
-              onClick={() => setOpenIndex(openIndex === index ? null : index)}
+              onMouseEnter={() => setHoverIndex(index)}
+              onMouseLeave={() => setHoverIndex(null)}
             >
               <h2 className="text-base md:text-lg font-medium text-[#062045] flex-1">
                 {item.question}

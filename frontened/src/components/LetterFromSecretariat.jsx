@@ -30,7 +30,7 @@ const LetterFromSecretariat = () => {
           viewport={{ once: false, amount: 0.3 }}
           className="text-lg md:text-xl text-gray-700 leading-relaxed text-left mb-6"
         >
-          Dear Delegates, Faculty Advisors, and Members of the Secretariat,
+          Dear Delegates and Faculty Advisors,
         </motion.p>
 
         {/* Second Paragraph */}
@@ -41,14 +41,7 @@ const LetterFromSecretariat = () => {
           viewport={{ once: false, amount: 0.3 }}
           className="text-lg md:text-xl text-gray-800 leading-relaxed text-left mb-6"
         >
-          It is our immense pleasure to welcome you to{" "}
-          <span className="font-semibold text-[#9a7e2f]">
-            KIET Model United Nations 2025
-          </span>
-          . As members of the Secretariat, we strive to create a platform where
-          diplomacy, dialogue, and debate flourish. This conference is not just
-          an event; it is an experience—a chance to challenge ideas, refine
-          perspectives, and create solutions that can shape the future.
+          Bringing the world's citizens together on a platform where disputes may be settled through involvement, communication, and understanding is urgently needed. Through MUNs, students learn about diplomacy, international relations, and the United Nations. It enhances research, public speaking, and debating skills, along with critical thinking, leadership abilities, and effective conflict resolution.
         </motion.p>
 
         {/* Third Paragraph */}
@@ -59,28 +52,33 @@ const LetterFromSecretariat = () => {
           viewport={{ once: false, amount: 0.3 }}
           className="text-lg md:text-xl text-gray-800 leading-relaxed text-left mb-6"
         >
-          We are honored to guide you through this journey of{" "}
-          <span className="font-semibold text-[#9a7e2f]">
-            intellectual discourse and global leadership
-          </span>
-          . Prepare to engage in stimulating debates, forge meaningful
-          connections, and leave with newfound wisdom. We look forward to
-          witnessing the impact each of you will create!
+          We've always welcomed opportunities that broaden the perspectives of our young, dynamic leaders beyond rote memorization and encourage them to explore the uncharted waters of international politics and policymaking. With this thought in mind, we welcome you to <span className="font-semibold text-[#9a7e2f]">KIET MUN 2025</span> and its engaging and stimulating sessions ahead.
+        </motion.p>
+
+        {/* Fourth Paragraph */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.8 }}
+          viewport={{ once: false, amount: 0.3 }}
+          className="text-lg md:text-xl text-gray-800 leading-relaxed text-left mb-6"
+        >
+          Let the debates inspire new perspectives, foster diplomatic dialogue, and build bridges of collaboration. We are certain that each one of you will leave with enriched experiences and a deeper understanding of the complexities of our global society. Together, let us strive to become the change-makers of tomorrow.
         </motion.p>
 
         {/* Footer */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.8 }}
+          transition={{ duration: 1, delay: 1 }}
           viewport={{ once: false, amount: 0.3 }}
           className="mt-8 border-t-2 border-[#9a7e2f] pt-6 text-left"
         >
-          <p className="text-lg text-gray-700">Yours sincerely,</p>
+          <p className="text-lg text-gray-700">Warm regards,</p>
           <h3 className="text-2xl font-semibold text-[#062045] drop-shadow-md mt-2">
-            The Secretariat
+          <span className="font-semibold text-[#9a7e2f]"> The Secretariat</span>
           </h3>
-          <p className="text-lg text-gray-700">KIET Model United Nations 2025</p>
+          <p className="text-lg text-gray-700">KIET Model United Nations 2025 </p>
         </motion.div>
       </motion.div>
     </div>
