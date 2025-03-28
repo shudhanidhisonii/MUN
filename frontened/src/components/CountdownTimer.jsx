@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const CountdownTimer = () => {
-  const eventDate = new Date("2025-05-10T10:00:00").getTime();
+  const eventDate = new Date("2025-05-10T10:00:00").getTime(); // Choose the correct time
 
   const calculateTimeLeft = () => {
     const now = new Date().getTime();
@@ -38,7 +38,6 @@ const CountdownTimer = () => {
       viewport={{ once: false }}
       className="flex flex-col items-center justify-center bg-white text-[#062045] py-16 px-4"
     >
-      {/* Heading */}
       <motion.h2
         initial={{ opacity: 0, scale: 0.8 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -49,7 +48,6 @@ const CountdownTimer = () => {
         Conference Begins In
       </motion.h2>
 
-      {/* Timer Cards */}
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

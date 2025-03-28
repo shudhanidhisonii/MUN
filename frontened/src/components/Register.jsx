@@ -424,7 +424,7 @@ const Register = () => {
                 name="paymentScreenshot"
                 type="file"
                 onChange={handleChange}
-                className="hidden"
+                className="text-black"
                 accept="image/png, image/jpeg, image/gif"
               />
             </label>

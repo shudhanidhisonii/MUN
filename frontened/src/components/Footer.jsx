@@ -54,7 +54,11 @@ const Footer = () => {
         © 2025 KIET MUN. All Rights Reserved.
         <p className="text-gray-400 text-sm mt-2">
         Made with ❤️ by 
-        <a href="/team" className="text-white hover:underline ml-1">
+
+       
+
+        <a href="/Team" className="text-white hover:underline ml-1">
+
           KIET MUN Tech Team
         </a>
       </p>

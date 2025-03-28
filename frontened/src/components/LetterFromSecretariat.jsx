@@ -22,18 +22,17 @@ const LetterFromSecretariat = () => {
           Letter from the Secretariat
         </motion.h2>
 
-        {/* First Paragraph */}
+        {/* Letter Content */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
           viewport={{ once: false, amount: 0.3 }}
-          className="text-lg md:text-xl text-gray-700 leading-relaxed text-left mb-6"
+          className="text-lg md:text-xl text-gray-800 leading-relaxed text-left mb-6"
         >
           Dear Delegates and Faculty Advisors,
         </motion.p>
 
-        {/* Second Paragraph */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -44,7 +43,6 @@ const LetterFromSecretariat = () => {
           Bringing the world's citizens together on a platform where disputes may be settled through involvement, communication, and understanding is urgently needed. Through MUNs, students learn about diplomacy, international relations, and the United Nations. It enhances research, public speaking, and debating skills, along with critical thinking, leadership abilities, and effective conflict resolution.
         </motion.p>
 
-        {/* Third Paragraph */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -55,7 +53,6 @@ const LetterFromSecretariat = () => {
           We've always welcomed opportunities that broaden the perspectives of our young, dynamic leaders beyond rote memorization and encourage them to explore the uncharted waters of international politics and policymaking. With this thought in mind, we welcome you to <span className="font-semibold text-[#9a7e2f]">KIET MUN 2025</span> and its engaging and stimulating sessions ahead.
         </motion.p>
 
-        {/* Fourth Paragraph */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -76,9 +73,9 @@ const LetterFromSecretariat = () => {
         >
           <p className="text-lg text-gray-700">Warm regards,</p>
           <h3 className="text-2xl font-semibold text-[#062045] drop-shadow-md mt-2">
-          <span className="font-semibold text-[#9a7e2f]"> The Secretariat</span>
+            <span className="font-semibold text-[#9a7e2f]">The Secretariat</span>
           </h3>
-          <p className="text-lg text-gray-700">KIET Model United Nations 2025 </p>
+          <p className="text-lg text-gray-700">KIET Model United Nations 2025</p>
         </motion.div>
       </motion.div>
     </div>

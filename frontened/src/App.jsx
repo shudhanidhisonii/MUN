@@ -11,6 +11,11 @@ import FAQ from './faq/FAQ';
 import Registration from './registration/Registration';
 import Prize from './prize/Prize';
 
+
+import Team from './components/Team';
+
+
+
 const App = () => {
   const location = useLocation(); // Required for AnimatePresence to detect route changes
 
@@ -24,6 +29,7 @@ const App = () => {
           <Route path="/FAQs" element={<FAQ />} />
           <Route path="/Prizes" element={< Prize/>} />
           <Route path="/Register" element={<Registration />} />
+          <Route path="/Team" element={<Team/>} />
         </Routes>
       </AnimatePresence>
     </>

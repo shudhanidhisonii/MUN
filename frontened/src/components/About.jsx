@@ -9,7 +9,7 @@ const About = () => {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        viewport={{ once: false, amount: 0.3 }} // Repeats when in view (every time)
+        viewport={{ once: false, amount: 0.3 }}
         className="max-w-4xl w-full bg-white shadow-[0_8px_30px_rgba(0,0,0,0.12)] border-t-8 border-[#9a7e2f] rounded-lg p-10 md:p-14 relative overflow-hidden"
       >
         {/* Heading with Typewriter */}
@@ -31,26 +31,17 @@ const About = () => {
           />
         </motion.h2>
 
-        {/* First Paragraph */}
+        {/* Updated Content */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
           viewport={{ once: false, amount: 0.3 }}
-          className="text-lg md:text-xl text-gray-700 leading-relaxed text-left mb-6"
+          className="text-lg md:text-xl text-gray-800 leading-relaxed text-left mb-6"
         >
-          Welcome to{" "}
-          <span className="font-semibold text-[#9a7e2f]">
-            KIET Model United Nations
-          </span>
-          , where we are dedicated to fostering diplomacy, leadership, and
-          global understanding among students. Our mission is to provide a
-          platform for young minds to engage in meaningful dialogue on
-          international issues, enhancing their skills in negotiation, public
-          speaking, and critical thinking.
+          The <span className="font-semibold text-[#9a7e2f]">KIETMUN</span>, in its short span of existence, has earned a name for itself in the Delhi-NCR MUN circuit. KIETMUN is a battle of words where participants engage in intellectual duels, using their wits and voices to express their opinions.
         </motion.p>
 
-        {/* Second Paragraph */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -58,13 +49,9 @@ const About = () => {
           viewport={{ once: false, amount: 0.3 }}
           className="text-lg md:text-xl text-gray-800 leading-relaxed text-left mb-6"
         >
-          Established in 2025, KIET MUN has grown into a vibrant community that
-          simulates the workings of the United Nations. We bring together
-          delegates from diverse backgrounds to discuss pressing global
-          challenges, encouraging collaboration and the exchange of ideas.
+          It is a platform for students to connect with real-world issues that impact society. Model United Nations simulates UN discussions, where delegates represent countries to resolve global challenges. Through MUNs, students develop crucial life skills such as public speaking, research, negotiation, and collaboration.
         </motion.p>
 
-        {/* Third Paragraph */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -72,10 +59,7 @@ const About = () => {
           viewport={{ once: false, amount: 0.3 }}
           className="text-lg md:text-xl text-gray-800 leading-relaxed text-left"
         >
-          At the core of our organization are the values of integrity, respect,
-          and excellence. Join us at KIET Model United Nations, and be part of a
-          community committed to making a difference through dialogue and
-          action.
+          KIETMUN helps participants discover their potential in the literary world, guiding them in articulating thoughts, analyzing pressing global concerns, and formulating viable solutions. It is not just about debate; it is about preparing young minds to become future leaders, shaping discussions that matter.
         </motion.p>
       </motion.div>
     </div>
