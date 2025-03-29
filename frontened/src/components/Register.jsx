@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { createClient } from '@supabase/supabase-js'
 
 // Create a single supabase client for interacting with your database
-const supabase = createClient('https://wfvpxvstplutokslykcp.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndmdnB4dnN0cGx1dG9rc2x5a2NwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI2MTczOTYsImV4cCI6MjA1ODE5MzM5Nn0.I0l8pkf8tTkL9UjBOyWR0iJswPK0DZL9gzY7JoUBuUI')
+const supabase = createClient('https://gzesnriebmpgnwvzrvyd.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd6ZXNucmllYm1wZ253dnpydnlkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDMyMTgzNjAsImV4cCI6MjA1ODc5NDM2MH0.EPA7uGjOvg8vzEMin71wSEJ9ssAk9tarSELknmXxVEk')
 
 const Register = () => {
   const initialFormData = {
