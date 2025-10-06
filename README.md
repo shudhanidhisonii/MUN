@@ -34,7 +34,7 @@ It provides essential information about committees, events, and allows participa
 ## 📁 Project Structure  
 ---
 ```
-kiet-mun/
+frontened/
 ├── src/
 │ ├── components/ # Reusable UI components
 │ ├── pages/ # Main pages (Home, Committees, Register)
@@ -52,8 +52,9 @@ kiet-mun/
 
 ### 1️⃣ Clone the Repository
 ```
-git clone https://github.com/your-username/kiet-mun.git
-cd kiet-mun
+git clone https://github.com/shudhanidhisonii/MUN.git
+cd MUN
+cd frontened
 ```
 ### 2️⃣ Install Dependencies
 ```
